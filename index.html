@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Calculus Tutorial — Derivatives & More</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- MathJax for math rendering -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <header>
+    <h1>Calculus — Derivatives, Chain Rule & Minimum/Maximum Values</h1>
+    <p>Constant Rule • Power Rule • Product Rule • Quotient Rule • Chain Rule • Minimum/Maximum Values</p>
+  </header>
+
+  <div class="container">
+
+    <section class="topic-section" id="derivatives">
+        <h2 class="topic-title">Derivatives</h2>
+        <p>A derivative is a function that gives you the rate of change or slope of a function at any value x.</p>
+        <br>
+        <p>Subtopics of Derivatives include:</p> 
+        <ol> 
+            <li>Constant Rule</li> 
+            <li>Power Rule</li> 
+            <li>Product Rule</li> 
+            <li>Quotient Rule</li> 
+        </ol>
+    </section>
+
+    <!-- CONSTANT RULE -->
+    <section class="topic-section" id="constant-rule">
+        <h2 class="topic-title">Constant Rule</h2>
+        <p>The derivative of a constant is always 0.</p>
+    
+        <div class="example-box">
+            <h3>Example 1:</h3>
+            <div class="deriv">
+                <span class="frac"><span class="top">d</span><span class="bottom">dx</span></span> [ 8 ]
+            </div>
+    
+            <div class="steps">
+                <p><strong>Step 1:</strong> Identify the function:</p>
+                <p>The function is f(x) = 8, which is a constant.</p>
+    
+                <p><strong>Step 2:</strong> Apply the Constant Rule:</p>
+                <p>The derivative of any constant is 0.</p>
+    
+                <p><strong>Final Answer:</strong> <strong>0</strong></p>
+            </div>
+    
+            <p><strong>WHY:</strong>  
+                The number 8 does not change as x changes, so its rate of change is zero.  
+                That is why the derivative of 8 is <strong>0</strong>.
+            </p>
+        </div>
+    
+        <div class="example-box">
+            <h3>Example 2:</h3>
+            <div class="deriv">
+                <span class="frac"><span class="top">d</span><span class="bottom">dx</span></span> [ -7 ]
+            </div>
+    
+            <div class="steps">
+                <p><strong>Step 1:</strong> Identify the function:</p>
+                <p>The function is f(x) = -7, which is a constant.</p>
+    
+                <p><strong>Step 2:</strong> Apply the Constant Rule:</p>
+                <p>The derivative of any constant is 0.</p>
+    
+                <p><strong>Final Answer:</strong> <strong>0</strong></p>
+            </div>
+    
+            <p><strong>WHY:</strong>  
+                The value -7 does not change as x changes.  
+                Constants have no rate of change, so their derivatives are always <strong>0</strong>.
+            </p>
+        </div>
+    </section>
+    
+
+    <!-- POWER RULE -->
+    <section class="topic-section" id="power-rule">
+        <h2 class="topic-title">Power Rule</h2>
+        <p>For <strong>f(x) = xⁿ</strong>, the derivative is given by:</p>
+        <div class="formula">d/dx [ xⁿ ] = n·xⁿ⁻¹</div>
+    
+        <div class="example-box">
+            <h3>Example 1:</h3>
+            <div class="deriv">
+                <span class="frac"><span class="top">d</span><span class="bottom">dx</span></span> [ x² ]
+            </div>
+    
+            <div class="steps">
+                <p><strong>Step 1:</strong> Identify the exponent:</p>
+                <p>Exponent is <strong>2</strong></p>
+    
+                <p><strong>Step 2:</strong> Bring down the exponent as the coefficient:</p>
+                <p>Coefficient becomes 2</p>
+    
+                <p><strong>Step 3:</strong> Subtract 1 from the exponent:</p>
+                <p>New exponent = 2 − 1 = 1</p>
+    
+                <p><strong>Final Answer:</strong> <strong>2x</strong></p>
+            </div>
+    
+            <p><strong>WHY:</strong>  
+                According to the Power Rule, the exponent becomes the coefficient, and the new exponent is one less than the original.  
+                So the derivative of x² is <strong>2x</strong>.
+            </p>
+        </div>
+    
+        <div class="example-box">
+            <h3>Example 2:</h3>
+            <div class="deriv">
+                <span class="frac"><span class="top">d</span><span class="bottom">dx</span></span> [ x⁵ ]
+            </div>
+    
+            <div class="steps">
+                <p><strong>Step 1:</strong> Identify the exponent:</p>
+                <p>Exponent is <strong>5</strong></p>
+    
+                <p><strong>Step 2:</strong> Bring down the exponent as the coefficient:</p>
+                <p>Coefficient becomes 5</p>
+    
+                <p><strong>Step 3:</strong> Subtract 1 from the exponent:</p>
+                <p>New exponent = 5 − 1 = 4</p>
+    
+                <p><strong>Final Answer:</strong> <strong>5x⁴</strong></p>
+            </div>
+    
+            <p><strong>WHY:</strong>  
+                Using the Power Rule, the exponent becomes the coefficient, and the new exponent is one less.  
+                So the derivative of x⁵ is <strong>5x⁴</strong>.
+            </p>
+        </div>
+    </section>
+    
+
+    <!-- PRODUCT RULE -->
+    <section class="topic-section" id="product-rule">
+      <h2 class="topic-title">Product Rule</h2>
+      <p>If two functions are multiplied, 
+        𝑓
+        (
+        𝑥
+        )
+        =
+        𝑢
+        (
+        𝑥
+        )
+        ⋅
+        𝑣
+        (
+        𝑥
+        )
+        f(x)=u(x)⋅v(x), the derivative is
+        
+        𝑓
+        ′
+        (
+        𝑥
+        )
+        =
+        𝑢
+        ′
+        𝑣
+        +
+        𝑢
+        𝑣
+        ′
+        f
+        ′
+        (x)=u
+        ′
+        v+uv
+        ′</p>
+      <div class="formula">d/dx [ u·v ] = u'·v + u·v'</div>
+
+      <div class="example-box">
+        <h3>Example 1:</h3>
+        <div class="deriv">
+            <span class="frac"><span class="top">d</span><span class="bottom">dx</span></span> [ (x²)(x³) ]
+        </div>
+    
+        <div class="steps">
+            <p><strong>Step 1:</strong> Identify the functions:</p>
+            <p>u = x²</p>
+            <p>v = x³</p>
+    
+            <p><strong>Step 2:</strong> Find their derivatives:</p>
+            <p>u' = 2x</p>
+            <p>v' = 3x²</p>
+    
+            <p><strong>Step 3 (Product Rule):</strong>  
+            <em>(uv)' = u·v' + v·u'</em></p>
+    
+            <p>So, (x²)(x³)' = (x²)(3x²) + (x³)(2x)</p>
+    
+            <p><strong>Step 4: Simplify:</strong></p>
+            <p>(x²)(3x²) = 3x⁴</p>
+            <p>(x³)(2x) = 2x⁴</p>
+    
+            <p><strong>Final Answer:</strong> <strong>5x⁴</strong></p>
+        </div>
+    
+        <p><strong>WHY:</strong>  
+            We use the Product Rule because two expressions (x² and x³) are being multiplied.  
+            The rule says to multiply the first function by the derivative of the second,  
+            then add the second function multiplied by the derivative of the first.  
+            After following the steps and simplifying, the result becomes <strong>5x⁴</strong>.
+        </p>
+    </div>
+    
+      <div class="example-box">
+        <h3>Example 2:</h3>
+        <div class="deriv">
+            <span class="frac"><span class="top">d</span><span class="bottom">dx</span></span> [ (x²)(3x³) ]
+        </div>
+    
+        <div class="steps">
+            <p><strong>Step 1:</strong> Identify the functions:</p>
+            <p>u = x²</p>
+            <p>v = 3x³</p>
+    
+            <p><strong>Step 2:</strong> Find their derivatives:</p>
+            <p>u' = 2x</p>
+            <p>v' = 9x²</p>
+    
+            <p><strong>Step 3 (Product Rule):</strong>  
+            <em>(uv)' = u·v' + v·u'</em></p>
+    
+            <p>So, (x²)(3x³)' = (x²)(9x²) + (3x³)(2x)</p>
+    
+            <p><strong>Step 4: Simplify:</strong></p>
+            <p>(x²)(9x²) = 9x⁴</p>
+            <p>(3x³)(2x) = 6x⁴</p>
+    
+            <p><strong>Final Answer:</strong> <strong>15x⁴</strong></p>
+        </div>
+    
+        <p><strong>WHY:</strong>  
+            We use the Product Rule because two expressions (x² and 3x³) are being multiplied.  
+            The rule says to multiply the first function by the derivative of the second,  
+            then add the second function multiplied by the derivative of the first.  
+            After following the steps and simplifying, the result becomes <strong>15x⁴</strong>.
+        </p>
+    </div>
+    
+    </section>
+
+    <!-- QUOTIENT RULE -->
+    <section class="topic-section" id="quotient-rule">
+      <h2 class="topic-title">Quotient Rule</h2>
+      <p>For functions u(x) and v(x): <strong>(u/v)' = (u'·v − u·v') / v²</strong></p>
+      <div class="formula">(u/v)' = (u'v − uv') / v²</div>
+
+      <div class="example-box">
+        <h3>Example 1:</h3>
+        <div class="deriv">
+            <span class="frac"><span class="top">d</span><span class="bottom">dx</span></span> [ x² / x ]
+        </div>
+    
+        <div class="steps">
+            <p><strong>Step 1:</strong> Identify the functions:</p>
+            <p>u = x²</p>
+            <p>v = x</p>
+    
+            <p><strong>Step 2:</strong> Find their derivatives:</p>
+            <p>u' = 2x</p>
+            <p>v' = 1</p>
+    
+            <p><strong>Step 3 (Quotient Rule):</strong>  
+            <em>(u/v)' = (u'·v − u·v') / v²</em></p>
+    
+            <p>So, (x² / x)' = (2x·x − x²·1) / x²</p>
+    
+            <p><strong>Step 4: Simplify:</strong></p>
+            <p>Numerator: 2x² − x² = x²</p>
+            <p>Divide by denominator: x² / x² = 1</p>
+    
+            <p><strong>Final Answer:</strong> <strong>1</strong></p>
+        </div>
+    
+        <p><strong>WHY:</strong>  
+            We use the Quotient Rule because one function is divided by another.  
+            After simplifying the numerator and denominator, the derivative simplifies to <strong>1</strong>.
+        </p>
+    </div>
+    
+    <div class="example-box">
+        <h3>Example 2:</h3>
+        <div class="deriv">
+            <span class="frac"><span class="top">d</span><span class="bottom">dx</span></span> [ x⁴ / x² ]
+        </div>
+    
+        <div class="steps">
+            <p><strong>Step 1:</strong> Identify the functions:</p>
+            <p>u = x⁴</p>
+            <p>v = x²</p>
+    
+            <p><strong>Step 2:</strong> Find their derivatives:</p>
+            <p>u' = 4x³</p>
+            <p>v' = 2x</p>
+    
+            <p><strong>Step 3 (Quotient Rule):</strong>  
+            <em>(u/v)' = (u'·v − u·v') / v²</em></p>
+    
+            <p>So, (x⁴ / x²)' = (4x³·x² − x⁴·2x) / (x²)²</p>
+    
+            <p><strong>Step 4: Simplify:</strong></p>
+            <p>Numerator: 4x⁵ − 2x⁵ = 2x⁵</p>
+            <p>Denominator: (x²)² = x⁴</p>
+            <p>Divide: 2x⁵ / x⁴ = 2x</p>
+    
+            <p><strong>Final Answer:</strong> <strong>2x</strong></p>
+        </div>
+    
+        <p><strong>WHY:</strong>  
+            We use the Quotient Rule because one function is divided by another.  
+            After applying the rule and simplifying, the derivative of x⁴ / x² is <strong>2x</strong>.
+        </p>
+    </div>
+    
+    </section>
+
+    <!-- CHAIN RULE -->
+    <section class="topic-section" id="chain-rule">
+      <h2 class="topic-title">Chain Rule</h2>
+      <p>For a composite function f(g(x)): <strong>(f ∘ g)' = f'(g(x)) · g'(x)</strong></p>
+      <div class="formula">d/dx [ f(g(x)) ] = f'(g(x)) · g'(x)</div>
+
+      
+        <div class="example-box">
+            <h3>Example 1:</h3>
+            <div class="deriv">
+                <span class="frac"><span class="top">d</span><span class="bottom">dx</span></span> [ (3x + 1)² ]
+            </div>
+        
+            <div class="steps">
+                <p><strong>Step 1:</strong> Identify the outer and inner functions:</p>
+                <p>Outer: u² → derivative = 2u</p>
+                <p>Inner: u = 3x + 1 → derivative = 3</p>
+        
+                <p><strong>Step 2 (Chain Rule):</strong> Multiply outer derivative by inner derivative:</p>
+                <p>2(3x + 1) · 3</p>
+        
+                <p><strong>Step 3:</strong> Multiply constants:</p>
+                <p>6(3x + 1)</p>
+        
+                <p><strong>Final Answer:</strong> <strong>6(3x + 1)</strong></p>
+            </div>
+        
+            <p><strong>WHY:</strong>  
+                Using the Chain Rule, the derivative of the outer function is multiplied by the derivative of the inner function.  
+                After multiplying the constants, we get the final derivative: <strong>6(3x + 1)</strong>.
+            </p>
+        </div>
+        
+        <div class="example-box">
+            <h3>Example 2:</h3>
+            <div class="deriv">
+                <span class="frac"><span class="top">d</span><span class="bottom">dx</span></span> [ (2x⁵ + 3x⁴ + 6x + 1)⁵ ]
+            </div>
+        
+            <div class="steps">
+                <p><strong>Step 1:</strong> Identify the outer and inner functions:</p>
+                <p>Outer: u⁵ → derivative = 5u⁴</p>
+                <p>Inner: u = 2x⁵ + 3x⁴ + 6x + 1 → derivative = 10x⁴ + 12x³ + 6</p>
+        
+                <p><strong>Step 2 (Chain Rule):</strong> Multiply outer derivative by inner derivative:</p>
+                <p>5(2x⁵ + 3x⁴ + 6x + 1)⁴ · (10x⁴ + 12x³ + 6)</p>
+        
+                <p><strong>Step 3:</strong> Multiply constants in the inner derivative:</p>
+                <p>50x⁴ + 60x³ + 30 (2x⁵ + 3x⁴ + 6x + 1)⁴</p>
+        
+                <p><strong>Final Answer:</strong> <strong>50x⁴ + 60x³ + 30(2x⁵ + 3x⁴ + 6x + 1)⁴</strong></p>
+            </div>
+        
+            <p><strong>WHY:</strong>  
+                Using the Chain Rule, the derivative of the outer function is multiplied by the derivative of the inner function.  
+                After multiplying the constants, we get the final derivative: <strong>50x⁴ + 60x³ + 30(2x⁵ + 3x⁴ + 6x + 1)⁴</strong>.
+            </p>
+        </div>
+        
+    
+    
+    </section>
+
+    <!-- MIN / MAX VALUES -->
+    <section class="topic-section" id="extrema">
+      <h2 class="topic-title">Minimum & Maximum Values</h2>
+      <p>The derivative helps find critical points, and the second derivative tells whether it is a maximum or minimum.</p>
+      <p>To find local minima or maxima of a function:</p>
+      <ol class="steps">
+        <li>Compute derivative f'(x)</li>
+        <li>Set f'(x) = 0 → find critical points</li>
+        <li>Compute f''(x): if positive → minimum, if negative → maximum</li>
+      </ol>
+
+      <div class="example-box">
+        <h3>Example 1:</h3>
+        <p><strong>f(x) = x³ − 3x</strong></p>
+    
+        <div class="steps">
+            <p><strong>Step 1:</strong> Find the first derivative:</p>
+            <p>f'(x) = 3x² − 3</p>
+    
+            <p><strong>Step 2:</strong> Set the derivative equal to 0 to find critical points:</p>
+            <p>3x² − 3 = 0 → x² = 1 → x = 1 or x = −1</p>
+    
+            <p><strong>Step 3 (Second Derivative Test):</strong> Determine concavity:</p>
+            <p>f''(x) = 6x</p>
+            <ul>
+                <li>At x = 1 → f''(1) = 6 &gt; 0  → <strong>minimum</strong></li>
+                <li>At x = −1 → f''(−1) = −6 &lt; 0  → <strong>maximum</strong></li>
+            </ul>
+    
+            <p><strong>Step 4:</strong> Substitute critical points into the original function to find the values:</p>
+            <ul>
+                <li>f(1) = (1)³ − 3(1) = 1 − 3 = −2 → minimum</li>
+                <li>f(−1) = (−1)³ − 3(−1) = −1 + 3 = 2 → maximum</li>
+            </ul>
+    
+            <p><strong>Final Answer:</strong> <strong>Maximum at x = −1; f(−1) = 2; Minimum at x = 1; f(1) = −2</strong></p>
+        </div>
+    
+        <p><strong>WHY:</strong>  
+            The second derivative test tells us concavity: positive → concave up → minimum, negative → concave down → maximum.  
+            Substituting the critical points into f(x) gives the actual maximum and minimum values.
+        </p>
+    </div>
+    
+
+    <div class="example-box">
+        <h3>Example 2:</h3>
+        <p><strong>f(x) = x² − 4x + 3</strong></p>
+    
+        <div class="steps">
+            <p><strong>Step 1:</strong> Find the first derivative:</p>
+            <p>f'(x) = 2x − 4</p>
+    
+            <p><strong>Step 2:</strong> Set the derivative equal to 0 to find critical points:</p>
+            <p>2x − 4 = 0 → x = 2</p>
+    
+            <p><strong>Step 3 (Second Derivative Test):</strong> Determine concavity:</p>
+            <p>f''(x) = 2 → f''(2) = 2 &gt; 0 → <strong>minimum</strong></p>
+    
+            <p><strong>Step 4:</strong> Substitute the critical point into the original function to find the value:</p>
+            <p>f(2) = (2)² − 4(2) + 3 = 4 − 8 + 3 = −1</p>
+    
+            <p><strong>Final Answer:</strong> <strong>Minimum at x = 2; f(2) = −1</strong></p>
+        </div>
+    
+        <p><strong>WHY:</strong>  
+            The second derivative test shows the graph is concave up at x = 2, indicating a minimum.  
+            Substituting x = 2 into f(x) gives the minimum value <strong>f(2) = −1</strong>.
+        </p>
+    </div>
+    
+    
+    </section>
+
+    
+
+  </div> <!-- container -->
+
+  <footer>
+    &copy; 2025 — Calculus Learning Site by Ameera & Ulyssa
+  </footer>
+
+</body>
+</html>
