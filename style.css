@@ -19,7 +19,7 @@ body {
     background: var(--bg-light);
     color: var(--text-dark);
     line-height: 1.6;
-    padding: 40px 20px;
+    padding: 20px;
 }
 
 /* ==== HEADER ==== */
@@ -32,18 +32,18 @@ header {
 
 header h1 {
     font-family: "Merriweather", serif;
-    font-size: 2.8rem;
+    font-size: 2.2rem;
     margin-bottom: 8px;
 }
 
 header p {
-    font-size: 1.1rem;
+    font-size: 1rem;
     opacity: 0.9;
 }
 
 /* ==== CONTAINER ==== */
 .container {
-    max-width: 960px;
+    max-width: 95%;
     margin: 20px auto;
     padding: 0 15px;
 }
@@ -52,10 +52,11 @@ header p {
 .topic-section, .topic {
     background: #FAF3F4;
     border-left: 8px solid var(--accent);
-    padding: 30px 25px;
+    padding: 25px 20px;
     margin-bottom: 30px;
     border-radius: 18px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    width: 100%;
     max-width: 900px;
     transition: 0.3s ease;
 }
@@ -68,8 +69,16 @@ header p {
 .topic-title, .topic h2 {
     font-family: "Merriweather", serif;
     color: var(--accent);
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin-bottom: 15px;
+}
+
+/* ==== CURSIVE TITLES FOR DERIVATIVES, CHAIN RULE, MIN/MAX ==== */
+.topic-section#derivatives .topic-title,
+.topic-section#chain-rule .topic-title,
+.topic-section#extrema .topic-title {
+    font-family: "Dancing Script", cursive;
+    font-style: italic;
 }
 
 /* ==== EXAMPLES ==== */
@@ -146,9 +155,6 @@ header p {
     color: var(--accent);
 }
 
-/* ==== VIDEOS ==== */
-
-
 /* ==== FOOTER ==== */
 footer {
     text-align: center;
@@ -160,13 +166,27 @@ footer {
     border-top: 4px solid var(--accent);
 }
 
-/* ==== CURSIVE TITLES FOR DERIVATIVES, CHAIN RULE, MIN/MAX ==== */
-.topic-section#derivatives .topic-title,
-.topic-section#chain-rule .topic-title,
-.topic-section#extrema .topic-title {
-    font-family: "Dancing Script", cursive;
-    font-style: italic;
+/* ==== ORDERED LIST ==== */
+ol {
+    margin-left: 20px;
 }
-ol{
-    margin-left: 17px;
+
+/* ==== RESPONSIVE DESIGN ==== */
+@media only screen and (max-width: 600px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .topic-title, .topic h2 {
+        font-size: 2rem;
+    }
+
+    .steps {
+        margin-left: 15px;
+    }
+
+    .example-box {
+        padding: 15px;
+    }
 }
+
